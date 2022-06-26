@@ -11,8 +11,7 @@ generateBtn.addEventListener("click", writePassword);
 
 function popup() {
     choice = [];
-
-    Length = parseInt(prompt("How many characters do you want your password to be? (must be at least 8 characters)"));
+    prompt("How many characters do you want your password to be? (must be at least 8 characters)");
 
     if(isNaN(Length) || Length < 8 || Length > 128) { //alert if someone enters a character that is not a number 8-128
         alert("Character length has to be a number, 8 - 128 digits. Try agin.")
@@ -23,15 +22,15 @@ function popup() {
         choice = choice.concat(lowerCase);
     }
 
-    if(confirm("Do you want uppercase letters in your password?")) {
+    if(confirm("Do you want uppercase letters?")) {
         choice = choice.concat(upperCase);
     }
 
-    if(confirm("Do you want special characters in your password?")) {
+    if(confirm("Do you want special characters?")) {
         choice = choice.concat(specialChar);
     }
 
-    if(confirm("Do you want numbers in your password?")) {
+    if(confirm("Do you want numbers?")) {
         choice = choice.concat(numbers);
     }
     return true;
@@ -53,5 +52,5 @@ function generatePassword () {
         var randomize = Math.floor(Math.random() * choice.length);
         password = password + choice[randomize];
     }
-     return password;
+    return password;
 }
