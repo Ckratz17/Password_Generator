@@ -11,7 +11,7 @@ generateBtn.addEventListener("click", writePassword);
 
 function popup() {
     choice = [];
-    prompt("How many characters do you want your password to be? (must be at least 8 characters)");
+    Length = parseInt(prompt("How many characters do you want your password to be? (must be at least 8 characters)"));
 
     if(isNaN(Length) || Length < 8 || Length > 128) { //alert if someone enters a character that is not a number 8-128
         alert("Character length has to be a number, 8 - 128 digits. Try agin.")
