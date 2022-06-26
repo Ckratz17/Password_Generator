@@ -9,7 +9,6 @@ var generateBtn = document.querySelector("#generate")
 
 generateBtn.addEventListener("click", writePassword);
 
-
 function popup() {
     choice = [];
 
@@ -47,7 +46,6 @@ function writePassword() {
         passwordText.value = genPassword;
     }
 }
-
 
 function generatePassword () {
     var password = " ";
